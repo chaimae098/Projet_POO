@@ -11,7 +11,9 @@ Elle propose :
 
 -Un centre d’aide et des défis de code pour pratiquer concrètement.
 
-L’application vise à rendre l’apprentissage plus ludique, progressif et personnalisé pour chaque utilisateur.
-Relaise par : - Kazoury Chaimae
+
+L’application vise à rendre l’apprentissage plus ludique, progressif et personnalisé pour chaque utilisateur  et de maniére gamifiée.
+Réalisé par : - Kazoury Chaimae
               -Fatima-Ezzahra Lagdem
               -Biby Maryam
+
