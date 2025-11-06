@@ -14,7 +14,6 @@ class BaseDeDonnees:
     
     def charger_joueur(self, nom):
         cursor = self.connexion.cursor()
-        #cursor.execute('SELECT score, niveau, login_streak FROM joueurs WHERE nom = ?', (nom,))
         cursor.execute('SELECT score, niveau, last_login_date, login_streak FROM joueurs WHERE nom = ?', (nom,))
         resultat = cursor.fetchone()
         if resultat:
