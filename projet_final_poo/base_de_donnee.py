@@ -8,7 +8,6 @@ class BaseDeDonnees:
     def creer_table(self):
         cursor = self.connexion.cursor()
         cursor.execute('''CREATE TABLE IF NOT EXISTS joueurs (nom TEXT PRIMARY KEY, score INTEGER DEFAULT 0, niveau INTEGER DEFAULT 1)''')
-        #cursor.execute('''CREATE TABLE IF NOT EXISTS joueurs (nom TEXT PRIMARY KEY, score INTEGER DEFAULT 0, niveau INTEGER DEFAULT 1, last_login_date TEXT, login_streak INTEGER DEFAULT 0)''')
         cursor.execute('''CREATE TABLE IF NOT EXISTS inscriptions_formations (id INTEGER PRIMARY KEY AUTOINCREMENT, nom_joueur TEXT, nom_formation TEXT, date_inscription TEXT, UNIQUE(nom_joueur, nom_formation))''')
         cursor.execute('''CREATE TABLE IF NOT EXISTS progres_lessons (id INTEGER PRIMARY KEY AUTOINCREMENT, nom_joueur TEXT, nom_formation TEXT, lesson TEXT, statut TEXT DEFAULT 'not_started', UNIQUE(nom_joueur, nom_formation, lesson))''')
         self.connexion.commit()
